@@ -26,7 +26,7 @@ router.post('/addSchool', async (req, res) => {
       'INSERT INTO schools (name, address, latitude, longitude) VALUES (?, ?, ?, ?)',
       [name, address, latitude, longitude]
     );
-    res.status(201).json({ message: 'School added successfully', schoolId: result.insertId });
+    res.status(201).json({ message: 'School added successfully .', schoolId: result.insertId });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err });
