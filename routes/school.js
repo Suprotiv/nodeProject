@@ -29,7 +29,7 @@ router.post('/addSchool', async (req, res) => {
     res.status(201).json({ message: 'School added successfully', schoolId: result.insertId });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to add school' });
+    res.status(500).json({ error: err });
   }
 });
 
